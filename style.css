@@ -937,3 +937,15 @@ fieldset {
     -webkit-filter: grayscale(0%); 
     filter: grayscale(0%);  
 }
+
+
+.lalakichat{
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+}
+
+.lalakichat:hover{
+    -webkit-filter: grayscale(0%); 
+    filter: grayscale(0%);  
+
+}

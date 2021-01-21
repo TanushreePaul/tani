@@ -1,598 +1,1032 @@
-    <!DOCTYPE html>
-    <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Tanushree Paul</title>
-        <link rel="icon" href="./favicon.ico" type="image/x-icon">
-        <!-- Bootstrap -->
-        <link href="./bootstrap.min.css" rel="stylesheet">
-        <link href="./ionicons.min.css" rel="stylesheet">
-        <link href="./animate.min.css" rel="stylesheet">
-        <link href="./aos.css" rel="stylesheet">
-        <!-- main style -->
-        <link href="./style.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-            integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+/* Google fonts & font family
+==================================================*/
 
-    </head>
+@import 'https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i';
 
-    <body>
 
-        <!-- Preloader -->
-        <div id="preloader">
-            <div id="status">
 
-                <div class="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
-                </div>
 
-            </div>
-        </div>
-        <!-- ./Preloader -->
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    line-height: 70px;
+}
 
-        <!-- header -->
-        <header class="navbar-fixed-top">
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#Skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#Certificate">Certificate</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!-- ./header -->
+h4 {
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    position: relative;
+    color: #425BB5;
+    margin-left: 40px;
+    font-weight: 700;
+}
 
-        <!-- home -->
-        <div class="section" id="home" data-stellar-background-ratio="0.5">
-            <div class="container">
-                <div class="disply-table">
-                    <div class="table-cell" data-aos="fade-up" data-aos-delay="0">
-                        <h4>Tanushree Paul</h4>
-                        <h1>Financial <br /> analyst</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ./home -->
+h4:before {
+    position: absolute;
+    width: 30px;
+    left: -40px;
+    content: "";
+    display: block;
+    height: 2px;
+    background: #425BB5;
+    top: 9px;
+}
 
-        <!-- about -->
-        <div class="section" id="about">
-            <div class="container">
-                <div class="col-md-6" data-aos="fade-up">
-                    <h4>01</h4>
-                    <h1 class="size-50">Know <br /> About me</h1>
-                    <div class="h-50"></div>
-                    <p> Student of ICFAI business school, Gurgaon.I see financial issues from a psychological perspective.
-                        Human behavior has always fascinated me. During my college years, I pursued psychology that allowed
-                        me to deepen my understanding of human behavior.</p>
-                    <p> Currently I am a 1st year MBA student and have developed my keen interest in understanding people's
-                        thought process while taking financial decisions.</p>
-                    <div class="h-50"></div> <img src="./Signature.svg" width="230" alt="" />
-                    <div class="h-50"></div>
-                </div>
-                <div class="col-md-6 about-img-div">
-                    <div class="about-border" data-aos="fade-up" data-aos-delay=".5"></div>
-                    <img src="./about-img.jpg" width="400" class="img-responsive" alt="" align="right" data-aos="fade-right"
-                        data-aos-delay="0" />
-                </div>
-            </div>
-        </div>
-        <!-- ./about -->
-    <br>
-        <!-- ------------------------------------------------------Skills------------------------------------------ -->
-        <div class="section" id="Skills" style="background-color: rgb(240, 240, 240); padding: 70px 0px;">
-            <div class="container">
-                <div class="col-md-12">
-                    <h4>02</h4>
-                    <h1 class="size-50">Skills</h1>
-                    <div class="h-50"></div>
-                </div>
-                <div class="col-md-12">
+
+/* General
+==================================================*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.size-50 {
+    font-size: 50px;
+    line-height: 50px
+}
+
+.h-50 {
+    height: 50px;
+}
+
+
+/* preloader
+==================================================*/
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 10000
+}
+
+#status,
+.preloader {
+    top: 50%;
+    left: 50%;
+    position: absolute
+}
+
+#status {
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -50px 0 0 -50px
+}
+
+.preloader {
+    height: 40px;
+    width: 40px;
+    margin-top: -20px;
+    margin-left: -20px
+}
+
+.preloader:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    height: 100%;
+    width: 100%;
+    -webkit-animation: rotation 1s linear infinite;
+    animation: rotation 1s linear infinite;
+    border: 2px solid #425BB5;
+    border-top: 2px solid transparent;
+    border-radius: 100%
+}
+
+.preloader>.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 25px;
+    width: 10.6px;
+    margin-top: -12.5px;
+    margin-left: -5.3px;
+    -webkit-animation: wink 1s ease-in-out infinite alternate;
+    animation: wink 1s ease-in-out infinite alternate
+}
+
+@media only screen and (min-width:768px) {
+    .preloader {
+        height: 60px;
+        width: 60px;
+        margin-top: -30px;
+        margin-left: -30px
+    }
+    .preloader:before {
+        left: -2px;
+        top: -2px;
+        border-width: 2px
+    }
+    .preloader>.icon {
+        height: 37.5px;
+        width: 15.9px;
+        margin-top: -18.75px;
+        margin-left: -7.95px
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .preloader {
+        height: 60px;
+        width: 60px;
+        margin-top: -30px;
+        margin-left: -30px
+    }
+    .preloader>.icon {
+        height: 50px;
+        width: 21.2px;
+        margin-top: -25px;
+        margin-left: -10.6px
+    }
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+
+@keyframes rotation {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+
+@-webkit-keyframes wink {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes wink {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* Header
+==================================================*/
+
+header {
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    height: 100px;
+
+    padding: 10px 0px 10px 0px;
+}
+
+nav ul {
+    display: inline-block;
+    padding-left: 0;
+    list-style: none;
+    padding: 20px;
+    margin-bottom: 0;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+nav li {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav li a {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #444;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.bg-nav {
+    background: #fff;
+    border-bottom: 1px solid #f3f3f3
+}
+
+.bg-nav ul {
+    padding: 10px;
+}
+
+a:focus {
+    color: #444;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #425BB5;
+    text-decoration: none;
+}
+
+a.active {
+    color: #425BB5;
+}
+
+
+/* home section
+==================================================*/
+
+#home {
+    background: url(../home-bg-2.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.disply-table {
+    display: table;
+    height: 100vh;
+}
+
+
+/* about section
+==================================================*/
+
+#about {
+    padding: 100px 0;
+}
+
+.about-img-div img {
+    margin: 0 auto;
+}
+
+.about-border {
+    position: absolute;
+    border: 10px solid #425BB5;
+    width: 400px;
+    height: 400px;
+    top: 40px;
+    left: 50px;
+    z-index: 1
+}
+
+
+/* experience section
+==================================================*/
+
+#experience {
+    padding: 100px 0;
+    background: #f3f3f3
+}
+
+.experience-row {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.experience-row h3 {
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: #425BB5;
+    font-size: 16px;
+    font-weight: bold
+}
+
+.experience-row p {
+    color: #888;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.experience-row .date {
+    color: #000;
+    font-size: 17px;
+}
+
+.timeline {
+    padding-left: 0;
+    list-style: none;
+    position: relative;
+}
+
+.timeline:before {
+    background-color: black;
+    content: '';
+    margin-left: -1px;
+    position: absolute;
+    top: 0;
+    left: 2em;
+    width: 2px;
+    height: 100%;
+}
+
+.timeline-event {
+    position: relative;
+}
+
+.timeline-event:hover .timeline-event-icon {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    background-color: #425BB5;
+}
+
+.timeline-event:hover .timeline-event-thumbnail {
+    box-shadow: inset 40em 0 0 0 #425BB5;
+}
+
+.timeline-event-copy {
+    padding: 2em;
+    position: relative;
+    top: -1.875em;
+    left: 4em;
+    width: 100%;
+}
+
+.timeline-event-copy h3 {
+    font-size: 1.75em;
+}
+
+.timeline-event-copy h4 {
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+}
+
+.timeline-event-copy strong {
+    font-weight: 700;
+}
+
+.timeline-event-copy p:not(.timeline-event-thumbnail) {
+    padding-bottom: 1.2em;
+}
+
+.timeline-event-icon {
+    -webkit-transition: -webkit-transform 0.2s ease-in;
+    transition: -webkit-transform 0.2s ease-in;
+    transition: transform 0.2s ease-in;
+    transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: #425BB5;
+    outline: 10px solid #f3f3f3;
+    display: block;
+    margin: 0.5em 0.5em 0.5em -0.5em;
+    position: absolute;
+    top: 0;
+    left: 2em;
+    width: 1em;
+    height: 1em;
+}
+
+.timeline-event-thumbnail {
+    -moz-transition: box-shadow 0.5s ease-in 0.1s;
+    -o-transition: box-shadow 0.5s ease-in 0.1s;
+    -webkit-transition: box-shadow 0.5s ease-in;
+    -webkit-transition-delay: 0.1s;
+    -webkit-transition: box-shadow 0.5s ease-in 0.1s;
+    transition: box-shadow 0.5s ease-in 0.1s;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: black;
+    box-shadow: inset 0 0 0 0em #425BB5;
+    display: inline-block;
+    margin-bottom: 1.2em;
+    padding: 0.25em 1em 0.2em 1em;
+}
+
+
+/* projects section
+==================================================*/
+
+#projects {
+    padding: 100px 0;
+}
+
+.portfolio .categories-grid span {
+    font-size: 30px;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.portfolio .categories-grid .categories ul li {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.portfolio .categories-grid .categories ul li a {
+    display: inline-block;
+    color: #60606e;
+    padding: 0 10px;
+    margin: 0 14px;
+    -webkit-transition: all .2s ease-in-out .2s;
+    transition: all .2s ease-in-out .2s;
+}
+
+.portfolio .categories-grid .categories ul li a:hover,
+.portfolio .categories-grid .categories ul li a:focus {
+    text-decoration: none;
+}
+
+.portfolio .categories-grid .categories ul li a.active {
+    background-color: #425BB5;
+    padding: 0px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.portfolio_filter {
+    padding-left: 0;
+}
+
+.portfolio_item {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.portfolio_item .portfolio_item_hover {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    -webkit-filter: grayscale(0%); 
+    filter: grayscale(0%);  
+    /* background-color: #b6b6b600; */
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    /* color: #333; */
+}
+
+.portfolio_item .portfolio_item_hover .item_info {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.portfolio_item .portfolio_item_hover .item_info span {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+    -webkit-transition: all .3s ease-in-out .3s;
+    transition: all .3s ease-in-out .3s;
+    opacity: 0;
+}
+
+.portfolio_item .portfolio_item_hover .item_info em {
+    font-style: normal;
+    display: inline-block;
+    background-color: #425BB5;
+    padding: 5px 20px;
+    color: #fff;
+    margin-top: 10px;
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+    -webkit-transition: all .3s ease-in-out .3s;
+    transition: all .3s ease-in-out .3s;
+    opacity: 0;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.portfolio_item:hover .portfolio_item_hover {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-filter: grayscale(0%); 
+    filter: grayscale(0%);  
+}
+
+.portfolio_item:hover .item_info em,
+.portfolio_item:hover .item_info span {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-filter: grayscale(0%); 
+    filter: grayscale(0%);  
+}
+
+.portfolio .categories-grid .categories ul li {
+    float: left;
+}
+
+.portfolio .categories-grid .categories ul li a {
+    padding: 0 10px;
+    -webkit-transition: all .2s ease-in-out .2s;
+    transition: all .2s ease-in-out .2s;
+}
+
+.portfolio_filter {
+    padding-left: 0;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.portfolio_item img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.portfolio_item img:hover{
+    -webkit-filter: grayscale(0%); 
+    filter: grayscale(0%);  
+
+}
+
+.portfolio-padding {
+    padding: 50px 0;
+}
+
+.portfolio-inner {
+    padding-bottom: 0 !important;
+    padding-top: 55px;
+}
+
+.modal-content {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.popup-modal {
+    background: #fff;
+}
+
+.close-popup-modal {
+    float: right;
+    margin: 20px;
+    font-size: 22px;
+    opacity: 0;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-transition-delay: .6s;
+    transition-delay: .6s;
+    position: fixed;
+    z-index: 100000;
+    right: 14px;
+}
+
+.animatedModal-on .close-popup-modal {
+    opacity: 1;
+}
+
+.modal-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    line-height: 50px;
+}
+
+
+/* contact
+==================================================*/
+
+#contact {
+    padding: 100px 0;
+   background-image: url(./imageonline-co-blackandwhiteimage.jpg);
+}
+
+#contact-form input,
+#contact-form textarea {
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 0;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: .2em;
+    font-size: 13px;
+    line-height: 13px;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    color: #000;
+}
+
+#contact-form label.error {
+    margin-top: 10px;
+    margin-bottom: 1em;
+    font-size: 12px;
+    line-height: 12px;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    color: #D33E43;
+    margin-left: 10px
+}
+
+#contact-form input[type="text"].error,
+#contact-form input[type="password"].error,
+#contact-form input[type="date"].error,
+#contact-form input[type="datetime"].error,
+#contact-form input[type="datetime-local"].error,
+#contact-form input[type="month"].error,
+#contact-form input[type="week"].error,
+#contact-form input[type="email"].error,
+#contact-form input[type="number"].error,
+#contact-form input[type="search"].error,
+#contact-form input[type="tel"].error,
+#contact-form input[type="time"].error,
+#contact-form input[type="url"].error,
+#contact-form textarea.error {
+    border-color: #D33E43
+}
+
+textarea {
+    resize: none;
+}
+
+fieldset {
+    border: 0px;
+    margin: 0;
+    padding: 0
+}
+
+.required {
+    color: #e9266d
+}
+
+#success,
+#error {
+    display: none
+}
+
+#success p,
+#error p {
+    display: block;
+}
+
+#success p {
+    color: #425BB5;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #425BB5;
+    margin-top: 10px;
+}
+
+#error p {
+    color: #D33E43;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #D33E43;
+    margin-top: 10px;
+}
+
+#submit {
+    background-color: #425BB5;
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.social {
+    padding-left: 0;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.social li {
+    float: left;
+}
+
+.social li a {
+    color: #333;
+    font-size: 35px;
+    margin-right: 15px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+
+.social li a:hover {
+    color: #425BB5;
+}
+
+
+/* Responsive media queries
+==================================================*/
+
+@media (max-width: 991px) {
+    .portfolio .categories-grid .categories ul li a {
+        padding: 0 2px;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-event-copy {
+        width: 90%;
+        left: 2em;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 50px;
+        line-height: 50px;
+    }
+    #home,
+    .disply-table {
+        height: 600px;
+    }
+    .about-border {
+        width: 265px;
+    }
+    .portfolio .categories-grid .categories ul li {
+        list-style: none;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 420px) {
+    nav li {
+        margin: 6px;
+    }
+    nav li a {
+        font-size: 10px;
+    }
+}
+
+/* =================================================================skills-================================== */
+.Skills {
+    padding: 45px;
+    background-color: #fdfdfd; }
+    @media screen and (max-width: 554px) {
+      .Skills {
+        padding: 40px 20px; } }
+    @media screen and (max-width: 1063px) {
+      .Skills {
+        padding: 40px 20px; } }
+    @media screen and (max-width: 348px) {
+      .Skills {
+        padding: 30px 10px !important; } }
+    .Skills .ro-clo {
+      padding: 40px 0px;
+      padding-top: 25px; }
+    .Skills .card-b::after {
+      box-sizing: border-box;
+      background-color: #FFF;
+      content: "";
+      position: absolute;
+      z-index: 100;
+      height: 25px;
+      left: 35px;
+      top: 108px;
+      transform: rotate(135deg);
+      width: 25px; }
+    .Skills .card-b {
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      background: url(./02.jpg) no-repeat bottom right;
+      background-color: rgba(0, 0, 0, 0);
+      background-position-x: right;
+      background-position-y: bottom;
+      background-size: auto auto;
+      background-color: #FFF;
+      background-size: 40px;
+      background-position: right 10px bottom 5px; }
+      .Skills .card-b p {
+        font-size: .95rem; }
+    .Skills .an-mtc {
+      padding-top: 23px; }
+    .stars {
+      padding-top: 33px; }
+      .stars li {
+        list-style: none;
+        color: #ffb011;
+        float: right;
+        font-size: 13px;
+        margin-left: 4px; }
+    .Skills .img-circl {
+      margin-top: 20px;
+      text-align: center; }
+    .Skills .img-circl img {
+      width: 80%;
+      border-radius: 50%; }
+     .star-par {
+      padding: 0px; }
+    @media screen and (max-width: 1013px) {
+       .stars li {
+        font-size: 12px; } }
+    @media screen and (max-width: 991px) {
+      .Skills .card-b::after {
+        display: none;
+        margin-top: 20px; }
+      .Skills .col-12 {
+        margin-top: 20px; } }
+  
+  /* ===================================== Slider CSS ==================================== */
+  .blog {
+    padding: 50px;
+    background-color: #FBFBFB; }
+  
+  @media screen and (max-width: 990px) {
+    .blog {
+      padding: 0px 10px; } }
+  @media screen and (max-width: 1199px) {
+    .blog .container {
+      max-width: 100%; } }
+  .blog .blog-singe {
+    box-shadow: 0 2px 6px 0 rgba(218, 218, 253, 0.65), 0 2px 6px 0 rgba(206, 206, 238, 0.54);
+    border-radius: 2px;
+    background-color: #FFF;
+    margin-bottom: 30px; }
+  
+  .blog .blog-singe .blog-img-tab {
+    padding: 0px; }
+  
+  .blog .blog-singe .blog-content-tab {
+    padding: 15px; }
+  
+  .blog .blog-singe .blog-content-tab h2 {
+    font-size: 19px; }
+  
+  .blog .blog-singe .blog-content-tab i {
+    margin-right: 10px;
+    font-size: 12px; }
+  
+  .blog .blog-singe .blog-content-tab i small {
+    margin-left: 5px;
+    font-size: 100%; }
+  
+  .blog .blog-singe .blog-content-tab .blog-desic {
+    margin-top: 8px;
+    font-size: 12px;
+    text-indent: 20px;
+    margin-bottom: 10px; }
+  
+  .blog .blog-singe .blog-content-tab a {
+    color: #06b2b6;
+    font-size: 12px; }
+  
+  .blog .blog-singe .blog-content-tab a i {
+    margin-left: 15px;
+    font-size: 13px; }
+  
+  .blog-row {
+    margin-top: 20px; }
+  
+
+/* 
+    .banku{
+        -webkit-filter: grayscale(100%); 
+        filter: grayscale(100%);
+    }
+    .banku:hover{
+        -webkit-filter: grayscale(0%); 
+        filter: grayscale(0%);
+    } */
+     #Certificate .banku{
+        -webkit-filter: grayscale(100%); 
+        filter: grayscale(100%);
+    }
+
+    #Certificate .banku:hover{
+        -webkit-filter: grayscale(0%); 
+        filter: grayscale(0%);   
+    }
+#Skills{
+    scroll-behavior: [ auto  smooth ];
+}
+#submit:hover{
+    background-color: rgb(0, 26, 255);
+
+}
+
+.img-responsive:hover{
+    -webkit-filter: grayscale(0%); 
+    filter: grayscale(0%);  
+}
+
+
+.lalakichat{
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+}
+
+.lalakichat:hover{
+    -webkit-filter: grayscale(0%); 
+    filter: grayscale(0%);  
+
+}
+
+.sada {
+    color: black;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+
+    .sada{
+        color:white;
     
-    
-                    <div data-anijs="if: scroll, on: window, do: bounceInLeft animated, before: scrollReveal"
-                        class="col-12  col-md-6 col-lg-4">
-                        <div class="shado-2 card-b">
-                            <h3>Microsoft Excel</h3>
-                            <p>Excel Skills for Business Specialization, Intermediate & Advanced Level</p>
-                        </div>
-                        <div class="cust-det row">
-                            <div class="col-sm-3 col-3 img-circl" style="padding: 0px 10px; width: 70px;">
-                                <img alt="" src="./PinClipart.com_excel-clipart-free_3177716_1_70x70.png">
-                            </div>
-    
-                            <div class="col-sm-4 col-4 star-par" style="list-style: none;">
-                                <ul class="stars" style="padding-left: 20px;">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-    
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-    
-    
-                    <div data-anijs="if: scroll, on: window, do: bounceInLeft animated, before: scrollReveal"
-                        class="col-12  col-md-6 col-lg-4">
-                        <div class="shado-2 card-b">
-                            <h3> Data Analysis</h3>
-                            <p>Data Analysis and Visualization Foundations Specialization</p>
-                        </div>
-                        <div class="cust-det row">
-                            <div class="col-sm-3 col-3 img-circl" style="padding: 0px 10px; width: 70px;">
-                                <img alt="" src="./data.png">
-                            </div>
-    
-                            <div class="col-sm-4 col-4 star-par" style="list-style: none;">
-                                <ul class="stars" style="padding-left: 20px;">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-    
-    
-                    <div data-anijs="if: scroll, on: window, do: bounceInLeft animated, before: scrollReveal"
-                        class="col-12  col-md-6 col-lg-4">
-                        <div class="shado-2 card-b">
-                            <h3>Research</h3>
-                            <p>Systematic Review and Meta-Analysis, Behind the Statistics</p>
-                        </div>
-                        <div class="cust-det row">
-                            <div class="col-sm-3 col-3 img-circl" style="padding: 0px 10px; width: 70px;">
-                                <img alt=""
-                                    src="./11-Clever-Creative-Minimal-Logo-Designs-Research-In-Schools-by-Paul-Belford-Ltd-BPO.jpg">
-                            </div>
-    
-                            <div class="col-sm-4 col-4 star-par" style="list-style: none;">
-                                <ul class="stars" style="padding-left: 20px;">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-    
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-    
-    
-    
-    
-    
-    
-                </div>
-            </div>
-        </div>
+        font-weight: 600;
+    }
+
+} 
+
+
+
+.fa-linkedin-in{
+    color: black;
+     font-weight: 500;
+}
+
+
+
+@media (max-width: 600px) {
+
+    .fa-linkedin-in{
+        color: white;
+         font-weight: 500;
+    }
     
 
-        <!-- experience  -->
-        <div class="section" id="experience" style="background-color: white;">
-            <div class="container">
-                <div class="col-md-12">
-                    <h4>03</h4>
-                    <h1 class="size-50">My <br /> Experience</h1>
-                    <div class="h-50"></div>
-                </div>
-                <div class="col-md-12">
-                    <ul class="timeline">
-                        <li class="timeline-event" data-aos="fade-up">
-                            <label class="timeline-event-icon"></label>
-                            <div class="timeline-event-copy">
-                                <p class="timeline-event-thumbnail">Feburary 2021 - Present</p>
-                                <h3>Capital Box</h3>
-                                <h4>Intern</h4>
-                                <p><strong>Portfolio Managment</strong>
-                                    <br> Responsible for creating and managing investment allocations for private clients,
-                                    designing customized solutions <br> for the clients.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="timeline-event" data-aos="fade-up" data-aos-delay=".2">
-                            <label class="timeline-event-icon"></label>
-                            <div class="timeline-event-copy">
-                                <p class="timeline-event-thumbnail">Feburary 2021 - Present</p>
-                                <h3>Capital Box</h3>
-                                <h4>Intern</h4>
-                                <p><strong>Portfolio Managment</strong>
-                                    <br> Responsible for creating and managing investment allocations for private clients,
-                                    designing customized solutions <br> for the clients.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="timeline-event" data-aos="fade-up" data-aos-delay=".4">
-                            <label class="timeline-event-icon"></label>
-                            <div class="timeline-event-copy">
-                                <p class="timeline-event-thumbnail">Feburary 2021 - Present</p>
-                                <h3>Capital Box</h3>
-                                <h4>Intern</h4>
-                                <p><strong>Portfolio Managment</strong>
-                                    <br> Responsible for creating and managing investment allocations for private clients,
-                                    designing customized solutions <br> for the clients.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- ./experience -->
+} 
 
 
-
-        <!-- education  -->
-        <div class="section" id="education" style="background-color: rgb(240, 240, 240);">
-            <div class="container">
-                <div class="col-md-12">
-                    <h4>04</h4>
-                    <h1 class="size-50">My <br /> Education</h1>
-                    <div class="h-50"></div>
-                </div>
-                <div class="col-md-12">
-                    <ul class="timeline">
-                        <li class="timeline-event" data-aos="fade-up">
-                            <label class="timeline-event-icon"></label>
-                            <div class="timeline-event-copy">
-                                <p class="timeline-event-thumbnail">April 2020 - Present</p>
-                                <h3>ICFAI Business School</h3>
-                                <h4>
-                                    Master of Business Administration
-                                </h4>
-                                <p><strong>- MBA - Field Of Study : Finance, Marketing</strong>
-                                    <br>Ständiges Verbessern des agilen Entwicklungsprozesses beispielsweise durch Grunt,
-                                    Yeoman, GIT, JIRA und BrowserStack.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="timeline-event" data-aos="fade-up" data-aos-delay=".2">
-                            <label class="timeline-event-icon"></label>
-                            <div class="timeline-event-copy">
-                                <p class="timeline-event-thumbnail">june 2016 - April 2019</p>
-                                <h3>Delhi University</h3>
-                                <h4> Bachelor of Arts </h4>
-                                <p><strong> BA - Field Of Study : psychology and economics</strong>
-                                <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital
-                                    Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für
-                                    Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
-                            </div>
-                        </li>
-                        <li class="timeline-event" data-aos="fade-up" data-aos-delay=".4">
-                            <label class="timeline-event-icon"></label>
-                            <div class="timeline-event-copy">
-                                <p class="timeline-event-thumbnail">April 2014 - April 2016</p>
-                                <h3>Faridabad Model School</h3>
-                                <h4>Higher secondary certificate</h4>
-                                <p><strong>- Business/Commerce, General Grade - 80%</strong>
-
-                                    <br>Konzeption und Modellierung von Systemen und APIs für Digital Publishing und
-                                    Entitlement nach SOA
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- ./education -->
-    <!-- --------------------------------------------------------------------------certtification-------------------------------------------------------- -->
-
-    <div class="section" id="Certificate" style="background-color: rgb(255, 255, 255); padding: 70px 0px;">
-        <div class="container">
-            <div class="col-md-12">
-                <h4>05</h4>
-                <h1 class="size-50">Licence & <br> Certificate</h1>
-                <div class="h-50"></div>
-            </div>
-            <br><br>
-            <div class="col-md-6 col-sm-12">
-                <div class="blog-singe no-margin row">
-                    <div class="col-sm-2 blog-img-tab" style="margin:20px 0px;">
-                        <img src="./coursea_1_70x70.png" alt="">
-                    </div>
-                    <div class="col-sm-7 blog-content-tab">
-                        <h2 >
-                            Excel Skills for Business: Essentials</h2>
-                        <p>Coursera</p>
-                        <p class="blog-desic">Issued Nov 2020 - No Expiration Date</p>
-                        
-                        <a href="https://coursera.org/share/58ddd6a45fc8a86de12bd9fc3dee0bcf">See credential &nbsp; <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-sm-12">
-                <div class="blog-singe no-margin row">
-                    <div class="col-sm-2 blog-img-tab" style="margin:20px 0px;">
-                        <img src="./coursea_1_70x70.png" alt="">
-                    </div>
-                    <div class="col-sm-7 blog-content-tab">
-                        <h2 >
-                            Excel Skills for Business: Essentials II</h2>
-                        <p>Coursera</p>
-                        <p class="blog-desic">Issued Jan 2020 - No Expiration Date</p>
-                        
-                        <a href="https://coursera.org/share/58ddd6a45fc8a86de12bd9fc3dee0bcf">See credential &nbsp; <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            
+.fa-instagram{
+    color: black;
+     font-weight: 500;
+}
 
 
+@media (max-width: 600px) {
 
-
-                
-            </div>
-        </div>
-    </div>
-
-        <!------------------------------------------------------------------------- projects ------------------------------------------------------------------------->
-
-
-        <div class="section" id="projects">
-            <div class="container">
-                <div class="col-md-12">
-                    <h4>06</h4>
-                    <h1 class="size-50">My <br /> Projects</h1> 
-                </div>
-                <!-- main container -->
-                <div class="main-container portfolio-inner clearfix">
-                    <!-- portfolio div -->
-                    <div class="portfolio-div">
-                        <div class="portfolio">
-                            <!-- portfolio_filter -->
-                            <div class="categories-grid wow fadeInLeft">
-                                <nav class="categories">
-                                    <ul class="portfolio_filter">
-                                        <li><a href="" class="active" data-filter="*">All</a></li>
-                                        <li><a href="" data-filter=".photography">Photography</a></li>
-                                        
-                                        <li><a href="" data-filter=".graphics">Graphics</a></li>
-                                        <li><a href="" data-filter=".ads">Advertising</a></li>
-                                       
-                                    </ul>
-                                </nav>
-                            </div>
-                            <!-- portfolio_filter -->
-                            
-                            <!-- portfolio_container -->
-                            <div class="no-padding portfolio_container clearfix" data-aos="fade-up">
-                                <!-- single work -->
-                                <div class="col-md-4 col-sm-6  photography">
-                                    <a id="demo01" href="#animatedModal" target="_blank" class="portfolio_item"> <img src="./01.jpeg" alt="image" class="img-responsive" />
-                                        <div class="portfolio_item_hover">
-                                            <div class="portfolio-border clearfix">
-                                                <div class="item_info"  target="_blank"> <span>Mockups in seconds</span> <em>Fashion / Logo</em> </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end single work -->
-                                
-                                <!-- single work -->
-                                <div class="col-md-4 col-sm-6  graphics">
-                                    <a id="demo02" href="#animatedModal"  target="_blank" class="portfolio_item"> <img src="./01.jpeg" alt="image" class="img-responsive" />
-                                        <div class="portfolio_item_hover">
-                                            <div class="portfolio-border clearfix">
-                                                <div class="item_info"> <span>Floating mockups</span> <em>Ads / Graphics</em> </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end single work -->
-                                
-                                <!-- single work -->
-                                <div class="col-md-4 col-sm-6 photography">
-                                    <a id="demo03" href="#animatedModal" class="portfolio_item"> <img src="./01.jpeg" alt="image" class="img-responsive" />
-                                        <div class="portfolio_item_hover">
-                                            <div class="portfolio-border clearfix">
-                                                <div class="item_info"> <span>Photorealistic smartwatch</span> <em>Photography</em> </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end single work -->
-                                
-                                <!-- single work -->
-                                <div class="col-md-4 col-sm-6 ads">
-                                    <a id="demo04" href="#animatedModal" class="portfolio_item"> <img src="./01.jpeg" alt="image" class="img-responsive" />
-                                        <div class="portfolio_item_hover">
-                                            <div class="portfolio-border clearfix">
-                                                <div class="item_info"> <span>Held by hands</span> <em>Fashion / Ads</em> </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end single work -->
-                                
-                                <!-- single work -->
-                                <div class="col-md-4 col-sm-6 photography">
-                                    <a id="demo05" href="#animatedModal" class="portfolio_item"> <img src="./01.jpeg" alt="image" class="img-responsive" />
-                                        <div class="portfolio_item_hover">
-                                            <div class="portfolio-border clearfix">
-                                                <div class="item_info"> <span>Mobile devices</span> <em>Graphics / Ads</em> </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end single work -->
-                                
-                                <!-- single work -->
-                                <div class="col-md-4 col-sm-6 ads">
-                                    <a id="demo06" href="#animatedModal" class="portfolio_item"> <img src="./01.jpeg"alt="image" class="img-responsive" />
-                                        <div class="portfolio_item_hover">
-                                            <div class="portfolio-border clearfix">
-                                                <div class="item_info"> <span>Photorealistic smartwatch</span> <em>Photography</em> </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end single work -->
-                                
-                                <!-- single work -->
-                                <div class="col-md-4 col-sm-6 graphics">
-                                    <a id="demo07" href="#animatedModal" class="portfolio_item"> <img src="./01.jpeg" alt="image" class="img-responsive" />
-                                        <div class="portfolio_item_hover">
-                                            <div class="portfolio-border clearfix">
-                                                <div class="item_info"> <span>Mobile devices</span> <em>Graphics / Ads</em> </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end single work -->
-                                
-                                <!-- single work -->
-                                <div class="col-md-4 col-sm-6 ads">
-                                    <a id="demo08" href="#animatedModal" class="portfolio_item"> <img src="./01.jpeg" alt="image" class="img-responsive" />
-                                        <div class="portfolio_item_hover">
-                                            <div class="portfolio-border clearfix">
-                                                <div class="item_info"> <span>Mobile devices</span> <em>Graphics / Ads</em> </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end single work -->
-                                
-                                <!-- single work -->
-                                <div class="col-md-4 col-sm-6 graphics">
-                                    <a id="demo09" href="#animatedModal" class="portfolio_item"> <img src="./01.jpeg" alt="image" class="img-responsive" />
-                                        <div class="portfolio_item_hover">
-                                            <div class="portfolio-border clearfix">
-                                                <div class="item_info"> <span>Mobile devices</span> <em>Graphics / Ads</em> </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- end single work -->
-                            </div>
-                            <!-- end portfolio_container -->
-                        </div>
-                        <!-- portfolio -->
-                    </div>
-                    <!-- end portfolio div -->
-                </div>
-                <!-- end main container -->
-            </div>
-        </div>
+    .fa-instagram{
+        color: white;
+         font-weight: 500;
+    }
     
 
+} 
 
-        <!-- ./projects -->
+.fa-facebook-f{
+color: black;
+ font-weight: 500;
+}
 
-        <!-- contact -->
-       
-    <!-- contact -->
-    <div class="section" id="contact">
-        <div class="container">
-            <div class="col-md-12">
 
-                <h1 class="size-50">Contact Me</h1>
-                <div class="h-50"></div>
-            </div>
-            <div class="col-md-4" data-aos="fade-up">
+@media (max-width: 600px) {
 
-                <h3 style="color: black;  font-weight: 600;">Phone Number</h3>
-                <p style="color: black;  font-weight: 600;">+91 9999416177</p>
-                <h3 style="color: black;  font-weight: 600;"> Mobile Number</h3>
-                <p style="color: black;  font-weight: 600;">+91 9821057286</p>
-                <h3 style="color: black;  font-weight: 600;">Email</h3>
-                <p style="color: black;  font-weight: 600;">paultanushri98@gmail.com</p>
+    .fa-facebook-f{
+        color: white;
+         font-weight: 500;
+        }
 
-                <h3 style="color:black; font-weight: 600;">Social Network</h3>
+} 
 
-                <ul class="social">
-                    <br>
-                    <li><a href="#"><i class="fab fa-linkedin-in" style="color: black;  font-size: 20px; "></i></a></li>
-                    <li><a href="https://www.instagram.com/tanushreepaul_/" target="_blank"><i class="fab fa-instagram"
-                                style="color: black; font-size: 20px;  "></i></a></li>
-                    <li><a href="https://www.facebook.com/Paul.Tanushri" target="_blank"><i class="fab fa-facebook-f"
-                                style="color: black; font-size: 20px;  "></i></a></li>
-                    <li><a href="https://github.com/TanushreePaul" target="_blank"><i class="fab fa-github"
-                                style="color:  black; font-size: 20px; "></i></a></li>
-                </ul>
-                <div class="clearfix"></div>
-                <div class="h-50"></div>
-            </div>
-            <div class="col-md-8" data-aos="fade-up">
-                <form class="contact-bg" id="contact-form" name="contact" method="post" novalidate="novalidate">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" />
-                    <input type="email" name="email" class="form-control" placeholder="Your E-mail" />
-                    <input type="text" name="phone" class="form-control" placeholder="Phone Number" />
-                    <textarea name="message" class="form-control" placeholder="Your Message"
-                        style="height:120px"></textarea> <br>
-                    <button id="submit" type="submit" name="submit" class="btn btn-glance">Send</button>
-                    <div id="success">
-                        <p class="green textcenter"> Your message was sent successfully! I will be in touch as soon as I
-                            can. </p>
-                    </div>
-                    <div id="error">
-                        <p> Something went wrong, try refreshing and submitting the form again. </p>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- ./contact -->
+.fa-github{
+color: black;
+ font-weight: 500;
+}
 
-    <!--DEMO01-->
-    <div id="animatedModal" class="popup-modal"  target="_blank">
-        
-        <div id="btn-close-modal" class="close-animatedModal close-popup-modal"><i class="fa fa-times" aria-hidden="true"></i> </div>
-        <div class="clearfix"></div>
-        <div class="modal-content">
-            <div class="container">
-                <div class="portfolio-padding">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h2>Tanushree Paul<br /> </h2>
-                       <h4> Financial analyst</h4>
-                        <div class="h-50"></div>
-                        <p>I am an aspiring financial analyst, currently pursuing pgpm with finance major at the icfai business school, Gurgaon.
-                            This program has provided me a broad perspective of all areas of management and helped me analyse various aspects of corporate framework structure.
-                            I have completed my graduation in BA with psychology & economics from mata sundri college , Delhi University. 
-                            My feild of interest in academics are finance, analytics, research and stock market.</p>
-                        <p>Some of my favourite things that i enjoy are singing, making art, photography, visiting places and socializing.
-                            I am capable of using Microsoft word, excel and PowerPoint. 
-                            I aspire to become a financial analyst as i have a keen interest in understanding people's thought process while taking financial decisions and i thrive to be in a competitive environment, surrounded by like-minded people who challenge me on a daily basis. I derive a sense of satisfaction from hard work and dedication.
-                            I am self-reliant, one who takes initiative on her own and forever on a quest to attain more knowledge and understand almost everything. I am sensitive and often expressive and aware of people’s feelings.I am enthusiastic, lively and sometimes impatient until I finish what I have started.</p>
-                        <br />
-                        <br /> <img src="./big-g.jpg" alt="" class="img-responsive lalakichat" />
-                        <br />
-                        <br />
-                        <p>Flexible approach and commitment to work while executing projects and assignments has taught me to take decisions criticaly and analiticaly</p>
-                        <p>Along with that i have developed adequate self-confidence in inter-personal skills, team building and leadership that can help  me to work effectively and grow in the dynamic business environment.</p>
-                        <br />
-                        <br />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- jQuery -->
-    <script src="./jquery.js"></script>
-    <!--  plugins  -->
-    <script src="./bootstrap.min.js"></script>
-    <script src="./plugins.js"></script>
-    <script src="./aos.js"></script>
-    <script src="./jquery.form.js"></script>
-    <script src="./jquery.validate.min.js"></script>
 
-    <!--  main script  -->
-    <script src="./custom.js"></script>
-</body>
+@media (max-width: 600px) {
 
-</html>
+    .fa-github{
+        color: white;
+         font-weight: 500;
+        }
+
+} 

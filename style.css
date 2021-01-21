@@ -949,3 +949,84 @@ fieldset {
     filter: grayscale(0%);  
 
 }
+
+.sada {
+    color: black;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+
+    .sada{
+        color:white;
+    
+        font-weight: 600;
+    }
+
+} 
+
+
+
+.fa-linkedin-in{
+    color: black;
+     font-weight: 500;
+}
+
+
+
+@media (max-width: 600px) {
+
+    .fa-linkedin-in{
+        color: white;
+         font-weight: 500;
+    }
+    
+
+} 
+
+
+.fa-instagram{
+    color: black;
+     font-weight: 500;
+}
+
+
+@media (max-width: 600px) {
+
+    .fa-instagram{
+        color: white;
+         font-weight: 500;
+    }
+    
+
+} 
+
+.fa-facebook-f{
+color: black;
+ font-weight: 500;
+}
+
+
+@media (max-width: 600px) {
+
+    .fa-facebook-f{
+        color: white;
+         font-weight: 500;
+        }
+
+} 
+
+.fa-github{
+color: black;
+ font-weight: 500;
+}
+
+
+@media (max-width: 600px) {
+
+    .fa-github{
+        color: white;
+         font-weight: 500;
+        }
+
+} 

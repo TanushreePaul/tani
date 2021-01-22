@@ -1030,3 +1030,14 @@ color: black;
         }
 
 } 
+
+
+@media (max-width: 600px) {
+  #home {
+    background: url(./wp3864537-wonder-woman-4k-wallpapers.jpg);
+    background-size: cover;
+    height: 100vh;
+
+
+         }
+}
